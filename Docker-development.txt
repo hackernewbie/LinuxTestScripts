@@ -1,0 +1,8 @@
+//Build a new docker image and commit
+docker run -i -t anyDockerImage:tag /bin/bash
+
+//Check if image is commited
+docker images 
+
+//Run new docker image
+docker image -it repository/imageName:tag bash

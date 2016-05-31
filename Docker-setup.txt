@@ -49,3 +49,6 @@ docker run -d -P tomcat:7	//'P' is for port-mapping
 
 //Find own Linux server's IP
 /sbin/ifconfig
+
+//Shut-down all docker containers
+docker stop $(docker ps -a -q)
