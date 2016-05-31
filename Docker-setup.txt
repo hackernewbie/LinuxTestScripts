@@ -30,3 +30,22 @@ docker run ubuntu:14.04 echo "hello world"
 docker run -i -t ubuntu:14.04 /bin/bash
 //Once inside the container, you can run any terminal command.
 //For example,'ls' gives you the filesystem of the container
+
+//We can exit the container by without stopping it (by default it stops as soon as you exit it) by ---> CTRL+P+Q
+
+//List all running containers 
+docker ps (currently running)
+docker ps -a (all ever run)
+
+//Run docker in background/deattached mode docker run -d dockerName:tag 
+
+docker run -d centos:7 ping 127.0.0.1 -c 100
+
+//Read docker logs 
+//docker logs containerShortID
+
+//Run a web application container (Tomcat)
+docker run -d -P tomcat:7	//'P' is for port-mapping
+
+//Find own Linux server's IP
+/sbin/ifconfig
