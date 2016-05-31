@@ -1,3 +1,32 @@
+//Good video tutorial on docker
+https://training.docker.com/introduction-to-docker
+
+//Installation docs
+https1://docs.docker.com/installation/
+
 //Install Docker
 
-wget -qo- https://get.docker.com/ | sh
+wget -qO- https://get.docker.com/ | sh
+
+//Add user to docker group to avoid having to use 'sudo' before every command
+sudo usermod -aG docker rajiv
+//logout after this and log back in 
+
+//Get version of docker
+docker version
+
+//Get list of all the images on the local images
+docker images
+
+//Calling a container --- syntax
+//docker run name:tag echo "some text to output"
+//docker run ubuntu:14.04 px ax
+docker run ubuntu:14.04 echo "hello world"
+
+//Run a container and get terminal access in that container
+//syntax 
+//docker run -i -t containername:tag /bin/bash
+//-i is for standard input of bash and -t is for terminal
+docker run -i -t ubuntu:14.04 /bin/bash
+//Once inside the container, you can run any terminal command.
+//For example,'ls' gives you the filesystem of the container
