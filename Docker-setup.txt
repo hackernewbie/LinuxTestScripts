@@ -1,0 +1,3 @@
+//Install Docker
+
+wget -qo- https://get.docker.com/ | sh
