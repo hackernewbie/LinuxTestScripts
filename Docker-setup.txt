@@ -52,3 +52,23 @@ docker run -d -P tomcat:7	//'P' is for port-mapping
 
 //Shut-down all docker containers
 docker stop $(docker ps -a -q)
+
+//Deleting containers
+docker rm docername/dockerid
+
+//Can delete only stopped containers
+docker stop 
+
+//Delete images
+docker rmi [image id]
+docker rmi [repo:tag]
+//If an image is tagged multiple times, remove each tag
+
+
+//Rename a local image repo before pushing it to Docker Hub Repo
+//Local image's repo name and reponame at docker should be same
+
+//Must be logged in to dockerhub to successfully push
+//To loging
+
+docker login
