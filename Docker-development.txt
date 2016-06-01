@@ -5,4 +5,50 @@ docker run -i -t anyDockerImage:tag /bin/bash
 docker images 
 
 //Run new docker image
+//To build a docker image
 docker image -it repository/imageName:tag bash
+
+//To build and commit a docker image using terminal
+
+docker image -it ubuntu:14.04 bash
+//add/install/do something here
+exit
+docker ps -a
+//Grab the container id from here
+
+//docker commit contianerid(which you just grabbed) yourrepositoryname/yourappname:tag
+
+//this commits the image
+
+//docker run should show your image
+
+
+//Running your own docker image
+//docker run -it yourrepositoryname/yourappname:tag /bash
+
+
+//To build and commit a docker image using a dockerfile
+
+//Contents of Dockerfile
+FROM base-image 
+RUN commads
+
+//Example
+FROM ubuntu14.04
+RUN adduser rajiv
+RUN apt-get install vim
+
+//Save the file as 'Dockerfile' with D in caps and no extension
+
+//To build
+//Get inside the folder where the Dockerfile lives
+
+//docker build -t repositoryname:tag [path]
+
+docker build -t rajiv/sampleapp:1.0 . [a trailing dot with a space to specify current dir of context of the build (context->where resources should live[THIS folder])
+
+//To run, just like you run any other docker image
+
+docker run -it yourrepositoryname/yourappname:tag 
+
+bash
